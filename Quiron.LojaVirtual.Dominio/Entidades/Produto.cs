@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 namespace Quiron.LojaVirtual.Dominio.Entidades
 {
-    class Produto
-    {
-        public int Produtoid { get; set;}
 
-        public string Descricao { get; set; }
+    public class Produto    
+        {
+            [Key]
+            public int ProductId { get; set; }
 
-        public string nome { get; set; }
+            public string Descricao { get; set; }
 
-        public decimal Preco { get; set; }
+            public string nome { get; set; }
 
-        public string categoria { get; set; }
-    }
+            public decimal Preco { get; set; }
+
+            public string categoria { get; set; }
+        }
 }

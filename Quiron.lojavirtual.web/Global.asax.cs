@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using Quiron.LojaVirtual.Dominio.Repositorio;
 
 namespace Quiron.lojavirtual.web
 {
@@ -13,6 +15,7 @@ namespace Quiron.lojavirtual.web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<EfDbContext>(null);
         }
     }
 }
